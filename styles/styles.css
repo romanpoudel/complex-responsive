@@ -350,6 +350,54 @@ button {
   color: #B6B3EB;
 }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 24px;
+}
+.card.outline {
+  border-radius: 8px;
+  border: 1px solid rgba(29, 28, 49, 0.1);
+  background: #fff;
+}
+.card__title {
+  color: #1d1c31;
+  font-size: 20px;
+  font-weight: 700;
+}
+.card__desc {
+  color: rgba(29, 28, 49, 0.6);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+}
+
+.section-title {
+  color: #1d1c31;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: -0.8px;
+  margin-bottom: 40px;
+}
+
+.arrowLink {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #1d1c31;
+}
+.arrowLink__default {
+  color: #5d55ff;
+}
+
 .btn {
   font-weight: 500;
   border-radius: 8px;
