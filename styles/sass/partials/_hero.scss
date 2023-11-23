@@ -1,0 +1,49 @@
+.hero {
+	display: flex;
+	justify-content: space-between;
+	padding: 164px 0 175px 0;
+
+	&__left {
+		max-width: 585px;
+	}
+	&__title {
+		color: $white;
+		font-size: 56px;
+		line-height: 1.25;
+		font-weight: 700;
+		letter-spacing: -1.12px;
+		margin-bottom: 32px;
+	}
+	&__info {
+		color: $fade-white;
+		font-size: 18px;
+		margin-bottom: 32px;
+	}
+	&__actions {
+		display: flex;
+		gap: 32px;
+		margin-bottom: 40px;
+	}
+	&__bottom {
+		display: flex;
+		gap: 32px;
+	}
+	&__stat {
+		&--info {
+			color: $white;
+			font-size: 32px;
+			font-weight: 600;
+			margin: 0;
+		}
+		&--desc {
+			font-size: $base-font-size;
+			font-weight: 400;
+			color: $fade-white;
+			margin: 0;
+		}
+	}
+
+	img {
+		max-width: 585px;
+	}
+}

@@ -1,0 +1,21 @@
+.header {
+	background: transparent;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__logo {
+		margin: 0;
+	}
+	&__nav {
+		display: flex;
+		list-style-type: none;
+		gap: 32px;
+		align-items: center;
+		&--item{
+			color: #B6B3EB;
+			&:active{
+				color: #fff;
+			}
+		}
+	}
+}
