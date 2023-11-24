@@ -14,7 +14,9 @@
 .bg-primary {
 	background: linear-gradient(45deg, #1b13a6 49.59%, #443cdf 88.57%), #fff;
 }
-
+.bg-secondary {
+	background: $primary-color;
+}
 .text-fade-white {
 	color: $fade-white;
 }
@@ -55,15 +57,68 @@
 }
 .section-title {
 	@include section-font($color: $black);
-	margin-bottom: 40px;
+	margin: 0;
 }
 
-.arrowLink{
+.arrowLink {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 	color: $black;
-	&__default{
-		color:$primary-color;
+	&__default {
+		color: $primary-color;
 	}
+}
+
+.container-margin {
+	margin-top: 120px;
+}
+
+.flex {
+	display: flex;
+	flex-direction: column;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+.subscribe {
+	background: $black;
+	border-radius: 8px;
+	width: 570px;
+	padding:32px;
+	margin-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	&__title {
+		color: $white;
+
+		font-size: $card-title-font-size;
+
+		font-weight: 700;
+	}
+	&__desc {
+		color: rgba(255, 255, 255, 0.6);
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px; /* 171.429% */
+	}
+}
+
+.input {
+	background: $black;
+	color: $white;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid $white;
+	width: 100%;
+	font-size: $base-font-size;
+}
+
+.form{
+	display: flex;
+	justify-content: space-between;
+	gap: 33px;
 }

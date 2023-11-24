@@ -12,9 +12,9 @@
 		gap: 32px;
 		align-items: center;
 		&--item{
-			color: #B6B3EB;
+			color: $fade-white;
 			&:active{
-				color: #fff;
+				color: $white;
 			}
 		}
 	}
