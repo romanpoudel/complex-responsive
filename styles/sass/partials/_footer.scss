@@ -1,20 +1,21 @@
 .footer {
-    padding-top: 70px;
-    &__top{
+	padding-top: 70px;
+	&__top {
         display: flex;
-        justify-content: space-between;
-    }
+        flex-direction: column;
+		@media screen and (min-width: 768px) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
 	&__base {
 		display: flex;
-        flex-direction: row;
+		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-        padding:10px 0;
+		padding: 10px 0;
 	}
-    &__navigation{
-        display: flex;
-        
-    }
-
+	&__navigation {
+		display: flex;
+	}
 }
-
