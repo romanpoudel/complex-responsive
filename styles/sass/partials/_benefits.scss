@@ -1,12 +1,17 @@
-.benefits{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    text-align: center;
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+.benefits {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	@media screen and (min-width: 768px) {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+.section-title {
+	text-align: center;
+    @media screen and (min-width: $breakpoint-md) {
+        text-align: left;
         
     }
 }

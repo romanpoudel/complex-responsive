@@ -7,14 +7,18 @@
 	padding: 16px 32px;
 	//   small sized button
 	&.small {
-		padding: 12px 24px;
+		padding: 8px 16px;
+		@media screen and (min-width: $breakpoint-lg) {
+			
+			padding: 12px 24px;
+		}
 		line-height: 20px;
 		color: #fff;
 		background: rgba(255, 255, 255, 0.1);
 	}
 	&.big {
 		font-size: 18px;
-		padding: 24px 32px;
+		padding: 24px 16px;
 	}
 
 	//outline button

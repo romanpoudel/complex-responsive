@@ -1,9 +1,9 @@
 .container {
 	padding: 0 24px;
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: $breakpoint-md) {
 		padding: 0 36px;
 	}
-	@media screen and (min-width: 1440px) {
+	@media screen and (min-width: $breakpoint-lg) {
 		padding: 0;
 		max-width: 1400px;
 		margin: 0 auto;
@@ -50,10 +50,18 @@
 
 @mixin section-font($color: $black) {
 	color: $color;
-	font-size: 40px;
+	font-size: 20px;
 	font-weight: 700;
 	line-height: 52px;
-	letter-spacing: -0.8px;
+	letter-spacing: -0.4 px;
+	@media screen and (min-width: $breakpoint-md) {
+		font-size: 32px;
+		letter-spacing: -0.64px;
+	}
+	@media screen and (min-width: $breakpoint-lg) {
+		font-size: 40px;
+		letter-spacing: -0.8px;
+	}
 }
 .section-title {
 	@include section-font($color: $black);
@@ -63,7 +71,10 @@
 .arrowLink {
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: center;
+	@media screen and (min-width: $breakpoint-md) {
+		justify-content: flex-end;
+	}
 	color: $black;
 	&__default {
 		color: $primary-color;
@@ -71,7 +82,9 @@
 }
 
 .container-margin {
-	margin-top: 120px;
+	@media screen and (min-width: $breakpoint-md) {
+		margin-top: 120px;
+	}
 }
 
 .flex {
@@ -87,7 +100,7 @@
 	background: $black;
 	border-radius: 8px;
 	width: 570px;
-	padding:32px;
+	padding: 32px;
 	margin-bottom: 40px;
 	display: flex;
 	flex-direction: column;
@@ -115,14 +128,17 @@
 	border-bottom: 1px solid $white;
 	width: 100%;
 	font-size: $base-font-size;
+	&::placeholder {
+		color: $white;
+	}
 }
 
-.form{
+.form {
 	display: flex;
 	justify-content: space-between;
 	gap: 33px;
 }
 
-.hide{
+.hide {
 	display: none;
 }

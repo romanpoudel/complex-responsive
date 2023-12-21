@@ -1,45 +1,62 @@
 .download {
-    position: relative;
+	position: relative;
+    @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+        margin-bottom: 250px;
+    }
 	&__left {
-		width: 85%;
-	}
-    &__img{
-        height:52px;
-    }
-    img{
         width: 100%;
-        object-fit: contain;
-    }
-    &__right {
-        width: 590px;
-        padding: 52px;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        background: $white;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        @media screen and (max-width: 768px) {
-            position: relative;
-            top: 50%;
-            width: 528px;
-            padding: 36px;
-            gap:32px;
+        @media screen and (min-width: $breakpoint-md) {
+            
+            width: 85%;
         }
-    }
-    &__title{
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-    }
-    &__btn{
-        display: flex;
-        gap: 24px;
-    }
-    &__desc{
-        text-align: left;
-    }
+	}
+	&__img {
+		height: 52px;
+	}
+	img {
+		width: 100%;
+		object-fit: contain;
+	}
+	&__right {
+		width: 590px;
+		padding: 52px;
+		@media screen and (min-width: $breakpoint-md) {
+		}
+		background: $white;
+		border-radius: 8px;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		@media screen and (min-width: $breakpoint-md) {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			width: 528px;
+			padding: 36px;
+			gap: 32px;
+		}
+		@media screen and (min-width: $breakpoint-lg) {
+			transform: translateY(-50%);
+		}
+	}
+	&__title {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		h2 {
+			text-align: left;
+		}
+		@media screen and (min-width: $breakpoint-md) {
+			h2 {
+				text-align: center;
+			}
+		}
+	}
+	&__btn {
+		display: flex;
+		gap: 24px;
+	}
+	&__desc {
+		text-align: left;
+	}
 }

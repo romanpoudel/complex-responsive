@@ -1,18 +1,32 @@
 .hero {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
-	padding: 164px 0 175px 0;
+	align-items: center;
+	padding: 36px 0;
+	@media screen and (min-width: $breakpoint-md) {
+		flex-direction: row;
+		padding: 100px 0;
+	}
 
 	&__left {
 		max-width: 585px;
+		@media screen and (min-width: $breakpoint-md) {
+			flex-basis: 40%;
+		}
 	}
 	&__title {
 		color: $white;
-		font-size: 56px;
+		font-size: 24px;
 		line-height: 1.25;
 		font-weight: 700;
 		letter-spacing: -1.12px;
 		margin-bottom: 32px;
+		text-align: center;
+		@media screen and (min-width: $breakpoint-md) {
+			font-size: 56px;
+			text-align: left;
+		}
 	}
 	&__info {
 		color: $fade-white;
@@ -21,29 +35,79 @@
 	}
 	&__actions {
 		display: flex;
+		flex-direction: column;
 		gap: 32px;
 		margin-bottom: 40px;
+		@media screen and (min-width: $breakpoint-md) {
+			flex-direction: row;
+		}
 	}
 	&__bottom {
 		display: flex;
+		justify-content: center;
 		gap: 32px;
+		padding-bottom: 26px;
+		@media screen and (min-width: $breakpoint-md) {
+			justify-content: left;
+		}
 	}
 	&__stat {
 		&--info {
 			color: $white;
-			font-size: 32px;
+			font-size: 20px;
 			font-weight: 600;
 			margin: 0;
+			white-space: nowrap;
+			@media screen and (min-width: $breakpoint-md) {
+				font-size: 24px;
+			}
+			@media screen and (min-width: $breakpoint-lg) {
+				font-size: 32px;
+			}
 		}
 		&--desc {
-			font-size: $base-font-size;
+			font-size: 12px;
 			font-weight: 400;
 			color: $fade-white;
 			margin: 0;
+			@media screen and (min-width: $breakpoint-lg) {
+				font-size: $base-font-size;
+			}
 		}
 	}
 
 	img {
 		max-width: 585px;
+	}
+	&__right {
+		@media screen and (min-width: $breakpoint-md) {
+			width: 50%;
+		}
+		img {
+			width: 100%;
+		}
+		.mobile {
+			display: block;
+		}
+		.tablet ,
+		.desktop {
+			display: none;
+		}
+		@media screen and (min-width: $breakpoint-md) {
+			.mobile {
+				display: none;
+			}
+			.tablet {
+				display: block;
+			}
+		}
+		@media screen and (min-width: $breakpoint-lg) {
+			.tablet {
+				display: none;
+			}
+			.desktop {
+				display: block;
+			}
+		}
 	}
 }

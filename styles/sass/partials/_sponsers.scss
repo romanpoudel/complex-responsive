@@ -1,9 +1,16 @@
 .sponsers {
-    height: 84px;
-	display: flex;
-    justify-content: space-between;
-    align-items: center;
+	display: none;
+	@media screen and (min-width: $breakpoint-md) {
+		max-width: 100%;
+		height: 84px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		img {
+			max-width: 100%;
+		}
+	}
 }
-.outer-sponser{
-    background: rgba(255, 255, 255, 0.20);
+.outer-sponser {
+	background: rgba(255, 255, 255, 0.2);
 }

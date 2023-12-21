@@ -7,15 +7,25 @@
 		margin: 0;
 	}
 	&__nav {
-		display: flex;
-		list-style-type: none;
-		gap: 32px;
-		align-items: center;
-		&--item{
-			color: $fade-white;
-			&:active{
-				color: $white;
+		display: none;
+		@media screen and (min-width: $breakpoint-md) {
+			display: flex;
+			list-style-type: none;
+			gap: 32px;
+			align-items: center;
+			&--item {
+				color: $fade-white;
+				font-size: 14px;
+				&:active {
+					color: $white;
+				}
 			}
+		}
+	}
+	&__menu {
+		display: block;
+		@media screen and (min-width: $breakpoint-md) {
+			display: none;
 		}
 	}
 }

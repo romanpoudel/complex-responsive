@@ -2,11 +2,12 @@
 	padding-top: 70px;
 	&__top {
         display: flex;
-        flex-direction: column;
-		@media screen and (min-width: 768px) {
-			display: flex;
-			justify-content: space-between;
-		}
+        flex-direction: row;
+				justify-content: space-between;
+		// @media screen and (min-width: 768px) {
+		// 	display: flex;
+		// 	justify-content: space-between;
+		// }
 	}
 	&__base {
 		display: flex;
@@ -17,5 +18,20 @@
 	}
 	&__navigation {
 		display: flex;
+		gap: 32px;
+		justify-content: space-between;
+		
+		&--items{
+			display: flex;
+			flex-direction: column;
+			width: 200px;
+			gap: 20px;
+			h3{
+				color:$black;
+			}
+			a{
+				color: $fade-white;
+			}
+		}
 	}
 }
