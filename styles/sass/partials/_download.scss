@@ -1,14 +1,13 @@
 .download {
 	position: relative;
-    @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
-        margin-bottom: 250px;
-    }
+	@media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+		margin-bottom: 250px;
+	}
 	&__left {
-        width: 100%;
-        @media screen and (min-width: $breakpoint-md) {
-            
-            width: 85%;
-        }
+		width: 100%;
+		@media screen and (min-width: $breakpoint-md) {
+			width: 85%;
+		}
 	}
 	&__img {
 		height: 52px;
@@ -18,15 +17,14 @@
 		object-fit: contain;
 	}
 	&__right {
-		width: 590px;
-		padding: 52px;
-		@media screen and (min-width: $breakpoint-md) {
-		}
 		background: $white;
 		border-radius: 8px;
 		display: flex;
 		flex-direction: column;
 		gap: 40px;
+		@media screen and (max-width: $breakpoint-md) {
+			padding-bottom: 20px;
+		}
 		@media screen and (min-width: $breakpoint-md) {
 			position: absolute;
 			top: 50%;
@@ -34,6 +32,8 @@
 			width: 528px;
 			padding: 36px;
 			gap: 32px;
+			width: 590px;
+			padding: 52px;
 		}
 		@media screen and (min-width: $breakpoint-lg) {
 			transform: translateY(-50%);

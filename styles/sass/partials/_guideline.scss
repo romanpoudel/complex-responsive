@@ -5,17 +5,24 @@
 	background-position: center;
 	&__top {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: flex-start;
-		padding-bottom: 140px;
-		padding-top: 70px;
+
 		h2 {
 			color: $white;
 		}
+		@media screen and (min-width: $breakpoint-md) {
+			justify-content: space-between;
+			padding-bottom: 140px;
+			padding-top: 70px;
+		}
 	}
 	&__desc {
-		display: flex;
+		display: none;
 		gap: 32px;
+		@media screen and (min-width: $breakpoint-md) {
+			display: flex;
+		}
 		&--item {
 			width: 296px;
 			color: rgba(255, 255, 255, 0.6);
@@ -27,14 +34,37 @@
 	&__timeline {
 		display: flex;
 		justify-content: space-between;
-		padding: 140px 0 209px 0;
-		&--item {
+		
+		@media screen and (max-width: $breakpoint-md) {
 			display: flex;
 			flex-direction: column;
-			align-items: center;
-			gap: 86px;
+			gap: 20px;
+			padding: 24px 0;
+			& > *:nth-child(n + 3) {
+				display: none;
+			}
+		}
+		@media screen and (min-width: $breakpoint-md) {
+			
+			padding: 140px 0 209px 0;
+		}
+		&--item {
+			display: flex;
+			@media screen and (max-width: $breakpoint-md) {
+			flex-direction: row;
+			justify-content: space-between;
 			&:nth-child(odd) {
-				flex-direction: column-reverse;
+				flex-direction: row-reverse;
+			}
+			}
+			flex-direction: column;
+			align-items: center;
+			@media screen and (min-width: $breakpoint-md) {
+				gap: 86px;
+				
+				&:nth-child(odd) {
+					flex-direction: column-reverse;
+				}
 			}
 		}
 		&--date {
@@ -53,25 +83,27 @@
 			font-size: 18px;
 			font-weight: 400;
 			text-align: center;
-			border: 2px solid rgba(255, 255, 255, 0.10);
+			border: 2px solid rgba(255, 255, 255, 0.1);
 			border-radius: 8px;
 			padding: 32px;
-			width: 100%;
-			ul{
+			@media screen and (min-width: $breakpoint-md) {
+				width: 100%;
+			}
+			ul {
 				display: flex;
 				flex-direction: column;
 				gap: 24px;
 			}
-			li{
+			li {
 				display: flex;
 				align-items: center;
 				gap: 16px;
-				img{
+				img {
 					width: 24px;
 					height: 24px;
 				}
 			}
-			span{
+			span {
 				display: flex;
 				align-items: center;
 			}

@@ -97,46 +97,76 @@
 }
 
 .subscribe {
-	background: $black;
+	background: $white;
 	border-radius: 8px;
-	width: 570px;
-	padding: 32px;
+	
+	padding: 32px 0;
 	margin-bottom: 40px;
 	display: flex;
 	flex-direction: column;
+	flex-basis: 40%;
+	button{
+		background: #4E46E8 ;
+		color: $white;
+		width: -moz-fit-content;
+		width: fit-content;
+	}
+	@media screen and (min-width: $breakpoint-md) {
+		width: 570px;
+		background: $black;
+		padding: 32px;
+		button{
+			background: $white ;
+			color: $black;
+		}
+	}
 	gap: 40px;
 	&__title {
-		color: $white;
-
+		color: $black;
 		font-size: $card-title-font-size;
-
 		font-weight: 700;
+		@media screen and (min-width: $breakpoint-md) {
+			color: $white;
+		}
 	}
 	&__desc {
-		color: rgba(255, 255, 255, 0.6);
+		color: $black;
 		font-size: 14px;
 		font-weight: 400;
 		line-height: 24px; /* 171.429% */
+		@media screen and (min-width: $breakpoint-md) {
+			color: rgba(255, 255, 255, 0.6);
+		}
 	}
 }
 
 .input {
-	background: $black;
 	color: $white;
 	outline: none;
 	border: none;
-	border-bottom: 1px solid $white;
+	border-bottom: 1px solid rgba(29, 28, 49, 0.2);
 	width: 100%;
 	font-size: $base-font-size;
 	&::placeholder {
-		color: $white;
+		color: rgba(29, 28, 49, 0.5);
+	}
+	@media screen and (min-width: $breakpoint-md) {
+		background: $black;
+		border-bottom: 1px solid $white;
+		&::placeholder {
+			color: $white;
+		}
 	}
 }
 
 .form {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	gap: 33px;
+	@media screen and (min-width: $breakpoint-md) {
+		flex-direction: row;
+	}
 }
 
 .hide {

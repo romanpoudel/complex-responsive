@@ -1,35 +1,63 @@
 .footer {
 	padding-top: 70px;
+	hr {
+		display: none;
+		@media screen and (min-width: $breakpoint-md) {
+			display: block;
+		}
+	}
 	&__top {
-        display: flex;
-        flex-direction: row;
-				justify-content: space-between;
-		// @media screen and (min-width: 768px) {
-		// 	display: flex;
-		// 	justify-content: space-between;
-		// }
+		display: flex;
+		flex-direction: column;
+		@media screen and (min-width: $breakpoint-md) {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			gap: 50px;
+		}
 	}
 	&__base {
 		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
 		padding: 10px 0;
+		@media screen and (min-width: $breakpoint-md) {
+			flex-direction: row;
+			flex-wrap: nowrap;
+		}
+	}
+	&__actions{
+		order: -1;
+		flex-basis: 100%;
+		justify-content: flex-start;
+		@media screen and (min-width: $breakpoint-md) {
+			order: 2;
+			flex-basis:auto;
+		}
+	}
+	&__rights{
+		order: 1;
+		@media screen and (min-width: $breakpoint-md) {
+			order: 0;
+			
+		}
 	}
 	&__navigation {
 		display: flex;
-		gap: 32px;
+		gap: 90px;
 		justify-content: space-between;
-		
-		&--items{
+
+		&--items {
 			display: flex;
 			flex-direction: column;
 			width: 200px;
 			gap: 20px;
-			h3{
-				color:$black;
+			h3 {
+				color: $black;
 			}
-			a{
+			a {
 				color: $fade-white;
 			}
 		}
